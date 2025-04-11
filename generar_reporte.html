@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte</title>
+    <link rel="stylesheet" href="coordinador.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generar Reporte</h2>
+
+        <label for="motivo">Motivo del Reporte:</label>
+        <textarea id="motivo" placeholder="Escriba el motivo" rows="4"></textarea>
+
+        <button onclick="generarReporte()">Generar</button>
+        <button onclick="window.location.href='consultar_alumno.html'">Volver</button>
+    </div>
+
+    <script>
+        function generarReporte() {
+            let motivo = document.getElementById("motivo").value;
+
+            if (motivo.trim() === "") {
+                alert("Debe ingresar un motivo.");
+                return;
+            }
+
+            alert("Reporte generado exitosamente.");
+        }
+    </script>
+</body>
+</html>

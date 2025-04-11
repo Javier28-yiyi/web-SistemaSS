@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Coordinador</title>
+    <link rel="stylesheet" href="coordinador.css">
+</head>
+<body>
+    <div class="container">
+        <img src="C:\Users\javie\OneDrive\Desktop\IngenieriadeSoftware\SistemaSS\LogoITL.png" alt="Logo ITL" class="logo">
+        <h2>Iniciar Sesión - Coordinador</h2>
+        <form id="coordinadorLoginForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="submit" onclick="window.location.href='consultar_alumno.html'">Iniciar Sesión</button>
+        </form>
+        <p>¿No estás registrado? <a href="coordinador_registro.html">Regístrate aquí</a></p>
+    </div>
+    <script src="coordinador.js"></script>
+</body>
+</html>

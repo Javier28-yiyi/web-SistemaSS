@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #003366, #cc0000, #ffcc00);
+            font-family: Arial, sans-serif;
+        }
+        .contenedor {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -40px auto 10px;
+        }
+        .avatar img {
+            width: 50px;
+            height: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        .boton {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            transition: 0.3s;
+        }
+        .boton:nth-child(2) {
+            background: #003366;
+        }
+        .boton:nth-child(3) {
+            background: #cc0000;
+        }
+        .boton:nth-child(4) {
+            background: #ffcc00;
+            color: black;
+        }
+        .boton:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="avatar">
+            <img src="C:\Users\javie\OneDrive\Desktop\IngenieriadeSoftware\SistemaSS\Persona1.jpg" alt="User Icon">
+        </div>
+        <h2>Iniciar Sesión</h2>
+        <button class="boton" onclick="window.location.href='alumno_login.html'">Ingresar como Alumno</button>
+        <button class="boton" onclick="window.location.href='coordinador_login.html'">Ingresar como Coordinador</button>
+        <button class="boton" onclick="window.location.href='admin.html'">Administrador</button>
+    </div>
+</body>
+</html>

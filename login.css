@@ -1,0 +1,58 @@
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #003366, #cc0000, #ffcc00);
+            font-family: Arial, sans-serif;
+        }
+        .contenedor {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #003366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -40px auto 10px;
+        }
+        .avatar img {
+            width: 50px;
+            height: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        .boton {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            transition: 0.3s;
+        }
+        .boton:nth-child(2) {
+            background: #003366;
+        }
+        .boton:nth-child(3) {
+            background: #cc0000;
+        }
+        .boton:nth-child(4) {
+            background: #ffcc00;
+            color: black;
+        }
+        .boton:hover {
+            opacity: 0.8;
+        }

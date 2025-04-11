@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Alumno</title>
+    <link rel="stylesheet" href="coordinador.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Consultar Alumno</h2>
+
+        <label for="num_control">Número de Control:</label>
+        <input type="text" id="num_control" placeholder="Ingrese el número de control">
+        <button onclick="buscarAlumno()">Buscar</button>
+
+        <div id="datos_alumno" style="display: none; margin-top: 20px;">
+            <h3>Datos del Alumno</h3>
+            <p><strong>Nombre:</strong> <span id="nombre_alumno">-</span></p>
+            <p><strong>Horas Restantes:</strong> <span id="horas_restantes">480</span></p>
+            <p><strong>Total de Horas Completadas:</strong> <span id="horas_completadas">0</span></p>
+
+            <h3>Opciones</h3>
+            <button onclick="window.location.href='agregar_horas.html'">Agregar Horas Extras</button>
+            <button onclick="window.location.href='generar_reporte.html'">Generar Reporte</button>
+        </div>
+    </div>
+
+    <script>
+        function buscarAlumno() {
+            let numControl = document.getElementById("num_control").value.trim();
+            
+            if (numControl === "") {
+                alert("Ingrese un número de control válido.");
+                return;
+            }
+
+            // Simulación de datos del alumno
+            let alumno = {
+                nombre: "Juan Pérez",  // Puedes cambiarlo si deseas.
+                horas_restantes: localStorage.getItem("horasRestantes") ? parseInt(localStorage.getItem("horasRestantes")) : 480,
+                horas_completadas: localStorage.getItem("horasCompletadas") ? parseInt(localStorage.getItem("horasCompletadas")) : 0
+            };
+
+            // Mostrar datos
+            document.getElementById("nombre_alumno").textContent = alumno.nombre;
+            document.getElementById("horas_restantes").textContent = alumno.horas_restantes;
+            document.getElementById("horas_completadas").textContent = alumno.horas_completadas;
+
+            // Mostrar la sección de datos
+            document.getElementById("datos_alumno").style.display = "block";
+        }
+    </script>
+</body>
+</html>

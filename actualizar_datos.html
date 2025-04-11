@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos</title>
+    <link rel="stylesheet" href="actualizar.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Actualizar Datos</h2>
+        <input type="text" placeholder="Número de Control" id="numControl">
+        <input type="text" placeholder="Nombre" id="nombre">
+        <button class="boton" onclick="mostrarFormulario()">Continuar</button>
+
+        <div id="formularioDatos" style="display: none;">
+            <h3>Datos Actuales</h3>
+            <label>Selecciona el dato a actualizar:</label>
+            <select id="campoSeleccionado">
+                <option value="correo">Correo Electrónico</option>
+                <option value="telefono">Teléfono</option>
+                <option value="direccion">Dirección</option>
+            </select>
+            <input type="text" placeholder="Nuevo valor" id="nuevoValor">
+            <button class="boton" onclick="actualizarDatos()">Actualizar Datos</button>
+        </div>
+
+        <div id="mensajeActualizado" style="display: none;">
+            <p>✅ Datos actualizados correctamente.</p>
+            <button class="boton" onclick="mostrarDatos()">Mostrar Datos</button>
+        </div>
+
+        <div id="datosActualizados" style="display: none;">
+            <h3>Datos Modificados</h3>
+            <p id="datoMostrado"></p>
+        </div>
+
+        <button class="boton" onclick="window.location.href='alumno_login.html'">Regresar</button>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById("formularioDatos").style.display = "block";
+        }
+
+        function actualizarDatos() {
+            let campo = document.getElementById("campoSeleccionado").value;
+            let nuevoValor = document.getElementById("nuevoValor").value;
+
+            if (nuevoValor.trim() === "") {
+                alert("Por favor, ingresa un nuevo valor.");
+                return;
+            }
+
+            document.getElementById("mensajeActualizado").style.display = "block";
+            document.getElementById("formularioDatos").style.display = "none";
+        }
+
+        function mostrarDatos() {
+            let campo = document.getElementById("campoSeleccionado").value;
+            let nuevoValor = document.getElementById("nuevoValor").value;
+
+            document.getElementById("datoMostrado").innerText = `Dato actualizado: ${campo} → ${nuevoValor}`;
+            document.getElementById("datosActualizados").style.display = "block";
+        }
+    </script>
+</body>
+</html>

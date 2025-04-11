@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    background-color: #1d3b6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Panel izquierdo */
+.left-panel {
+    width: 45%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-panel img {
+    width: 100%;
+    opacity: 0.2; /* Hace que el logo gris sea más tenue */
+}
+
+/* Panel derecho */
+.right-panel {
+    width: 55%;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+h2 {
+    color: #4a4a4a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Contenedor de los botones */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaciado entre los botones */
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Botones */
+button {
+    background-color: #f28509;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Ajuste de tamaño */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: auto; /* Se ajusta al contenido */
+    min-width: 150px; /* Tamaño mínimo */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Enlace de contraseña */
+.forgot-password {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}

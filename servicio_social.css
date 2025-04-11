@@ -1,0 +1,105 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #002855;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Panel principal con ancho reducido */
+  .login-panel {
+    display: flex;
+    width: 90%;
+    max-width: 900px; /* 🔧 Ajuste de ancho más pequeño */
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Panel izquierdo con imagen pegada */
+  .panel-left {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start; /* Imagen a la izquierda */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .engrane-fondo {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    margin-left: 0;
+  }
+  
+  /* Panel derecho con contenido */
+  .panel-right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+  }
+  
+  /* Logo */
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  /* Título */
+  h1 {
+    color: #002855;
+    margin-bottom: 15px;
+  }
+  
+  /* Pregunta */
+  p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  /* Botones */
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.amarillo {
+    background-color: #ffbf00;
+    color: #002855;
+  }
+  
+  .btn.amarillo:hover {
+    background-color: #e0aa00;
+    color: white;
+  }
+  
+  .btn.rojo {
+    background-color: #d62828;
+    color: white;
+  }
+  
+  .btn.rojo:hover {
+    background-color: #a61e1e;
+  }
+  

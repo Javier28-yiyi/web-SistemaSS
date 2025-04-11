@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Horas Extras</title>
+    <link rel="stylesheet" href="coordinador.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Horas Extras</h2>
+
+        <p><strong>Horas Totales Requeridas:</strong> 480</p>
+        <p><strong>Horas Restantes:</strong> <span id="horas_restantes">480</span></p>
+        <p><strong>Total de Horas Completas:</strong> <span id="horas_completadas">0</span></p>
+
+        <label for="horas_registradas">Registrar Horas:</label>
+        <input type="number" id="horas_registradas" placeholder="Ingrese horas" min="1" max="12">
+        <button onclick="registrarHoras()">Registrar</button>
+
+        <button onclick="window.location.href='consultar_alumno.html'">Volver</button>
+    </div>
+
+    <script>
+        // Cargar valores guardados
+        let horasRestantes = localStorage.getItem("horasRestantes") ? parseInt(localStorage.getItem("horasRestantes")) : 480;
+        let horasCompletadas = localStorage.getItem("horasCompletadas") ? parseInt(localStorage.getItem("horasCompletadas")) : 0;
+
+        document.getElementById("horas_restantes").textContent = horasRestantes;
+        document.getElementById("horas_completadas").textContent = horasCompletadas;
+
+        function registrarHoras() {
+            let horasIngresadas = parseInt(document.getElementById("horas_registradas").value);
+
+            if (!horasIngresadas || horasIngresadas <= 0 || horasIngresadas > 12) {
+                alert("Ingrese un número válido de horas (1 a 12).");
+                return;
+            }
+
+            if (horasIngresadas > horasRestantes) {
+                alert("No puedes registrar más horas de las que faltan.");
+                return;
+            }
+
+            horasRestantes -= horasIngresadas;
+            horasCompletadas += horasIngresadas;
+
+            document.getElementById("horas_restantes").textContent = horasRestantes;
+            document.getElementById("horas_completadas").textContent = horasCompletadas;
+
+            // Guardar en LocalStorage
+            localStorage.setItem("horasRestantes", horasRestantes);
+            localStorage.setItem("horasCompletadas", horasCompletadas);
+
+            alert("Horas registradas exitosamente.");
+        }
+    </script>
+</body>
+</html>

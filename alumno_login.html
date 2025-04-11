@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TecNM</title>
+    <link rel="stylesheet" href="alumno.css">
+    <style>
+        body { background-color: rgb(6, 22, 122) !important; }
+    </style>
+    
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-panel">
+            <img src="fondo_tecnm.png" alt="Fondo TecNM">
+        </div>
+        <div class="right-panel">
+            <img src="LogoITL.png" alt="Logo ITL" class="logo">
+            <h2>INSTITUTO TECNOLÓGICO DE LEÓN</h2>
+            <p>Plataforma TecNM 5.0 Inicia sesión</p>
+
+            <form>
+                <div class="input-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tu.correo@dominio.com" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="" required>
+                </div>
+            
+                <!-- Contenedor para organizar los botones -->
+                <div class="button-group">
+                    <button class="boton" onclick="window.location.href='servicio_social.html'">Ingresar</button>
+                    <button class="boton" onclick="window.location.href='actualizar_datos.html'">Actualizar Datos</button>
+                    <button class="boton" onclick="window.location.href='admin.html'">Eliminar Alumno</button>
+                </div>
+            </form>
+            
+
+            <p>
+                <a href="#">¿Olvidó su contraseña?</a> | 
+                <p>¿No estás registrado? <a href="registro_alumno.html">Regístrate aquí</a></p>                   
+                </a>
+              </p>
+              
+        </div>
+    </div>
+</body>
+</html>

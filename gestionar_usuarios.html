@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios</title>
+    <link rel="stylesheet" href="gestionar_usuarios.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Gestión de Usuarios</h2>
+
+        <!-- Barra de búsqueda -->
+        <input type="text" id="buscar" placeholder="Buscar por Número de Control...">
+
+        <!-- Tabla de alumnos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Número de Control</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Semestre</th>
+                    <th>Teléfono</th>
+                    <th>Horario</th>
+                    <th>Horas Faltantes</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20191001</td>
+                    <td>Ana López</td>
+                    <td>Sistemas</td>
+                    <td>8°</td>
+                    <td>477-123-4567</td>
+                    <td>08:00 - 12:00</td>
+                    <td>120</td>
+                    <td class="activo">Activo</td>
+                    <td><button class="baja-btn">Dar de Baja</button></td>
+                </tr>
+                <tr>
+                    <td>20191002</td>
+                    <td>Carlos Pérez</td>
+                    <td>Electrónica</td>
+                    <td>7°</td>
+                    <td>477-234-5678</td>
+                    <td>09:00 - 13:00</td>
+                    <td>90</td>
+                    <td class="inactivo">Inactivo</td>
+                    <td><button class="baja-btn">Dar de Baja</button></td>
+                </tr>
+                <tr>
+                    <td>20191003</td>
+                    <td>María Torres</td>
+                    <td>Industrial</td>
+                    <td>9°</td>
+                    <td>477-345-6789</td>
+                    <td>10:00 - 14:00</td>
+                    <td>60</td>
+                    <td class="activo">Activo</td>
+                    <td><button class="baja-btn">Dar de Baja</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al panel de administración -->
+        <button onclick="window.location.href='panel_admin.html'">Regresar</button>
+    </div>
+</body>
+</html>
